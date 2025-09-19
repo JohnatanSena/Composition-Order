@@ -1,0 +1,23 @@
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Diretórios de output
+out/
+build/
+target/
+bin/
+
+# Exceções para manter pastas de output específicas
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# Arquivos temporários e de sistema
+*.log
+*.tmp
+*.class
+*.jar
+*.war
+*.ear
