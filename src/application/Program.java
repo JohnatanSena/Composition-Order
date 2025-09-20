@@ -22,7 +22,7 @@ public class Program {
 
         System.out.println("Digite os dados pessoais");
         System.out.print("Name: ");
-        String name = sc.next();
+        String name = sc.nextLine();
         System.out.print("Email: ");
         String email = sc.next();
         System.out.print("Data de Nascimento: ");
@@ -39,8 +39,9 @@ public class Program {
         int n = sc.nextInt();
         for (int i = 0; i < n; i++){
             System.out.println("Dados do Pedido#" + (i +1) + ": ");
+            sc.nextLine();
             System.out.print("Nome do produto: ");
-            String productName = sc.next();
+            String productName = sc.nextLine();
             System.out.print("Preço do produto: ");
             double productPrice = sc.nextDouble();
             Product product = new Product(productName, productPrice);
