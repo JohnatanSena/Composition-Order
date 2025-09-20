@@ -10,10 +10,13 @@ import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) throws ParseException {
+
+        Locale.setDefault(Locale.US);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Scanner sc = new Scanner(System.in);
 
@@ -25,9 +28,6 @@ public class Program {
         System.out.print("Data de Nascimento: ");
         Date birthDate = sdf.parse(sc.next());
         Client client = new Client(name, email, birthDate);
-        System.out.println(client.getEmail());
-        System.out.println(client.getName());
-        System.out.println(client.getBirthDate());
 
         System.out.println("Entre com os dados do Pedido: ");
         System.out.print("Status do pedido: ");
@@ -50,5 +50,7 @@ public class Program {
             OrderItem orderItem = new OrderItem(quantity, productPrice, product);
             order.addItem(orderItem);
         }
+        System.out.println("ORDEM SUMARY");
+        System.out.println(order);
     }
 }
